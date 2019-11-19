@@ -1,22 +1,28 @@
-.App {
+
+.QuotesList {
   text-align: center;
+  width: 80vw;
+}
+.QuotesList .row {
+  display: flex;
+  justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Quote {
+  -webkit-box-shadow: -3px -1px 5px 2px rgba(199,185,199,1);
+  -moz-box-shadow: -3px -1px 5px 2px rgba(199,185,199,1);
+  box-shadow: -3px -1px 5px 2px rgba(199,185,199,1);
+  margin: 1rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  align-items: space-between;
+  max-height: 25vh;
+  overflow: scroll;
 }
-
-.App-link {
-  color: #09d3ac;
+.Quote-Author {
+  color: rgb(145,130,145);
+  background: #dcf5ec;
+  border-bottom: 1px solid #ccf0e3;
+  margin-bottom: 0.5rem;
 }

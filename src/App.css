@@ -1,4 +1,3 @@
-
 .QuotesList {
   text-align: center;
   width: 80vw;
@@ -61,16 +60,30 @@
   font-size: 14px;
   /* ---------------- */
   display: flex;
+  overflow: scroll;
 }
 
-
-
+iframe {
+  padding: 0 5%;
+  width:33%;
+  height:25%;
+  border: none;
+}
 
 @media only screen and (max-width: 600px) {
   .Quote {
     margin: 0.5rem;
     max-height: 100vh;
-    overflow: visible;
+    width: 100vw;
+    overflow: auto;
   }
-
+  .Quote-Author {
+    margin: 0;
+    border: 0;
+    width: 100%;
+  }
+  iframe {
+    width:50%;
+    height:33%;
+  }
 }

@@ -20,9 +20,8 @@ class Collapsible extends React.Component {
                     (
                     <div className="content">
                         {this.props.lists.map((list,i) => 
-                        <iframe width="720" height="405" 
+                        <iframe 
                         src={"https://www.youtube.com/embed?" + list} 
-                        frameBorder="0" 
                         allowFullScreen 
                         title={"playlist" + i} />)}
                     </div>) 

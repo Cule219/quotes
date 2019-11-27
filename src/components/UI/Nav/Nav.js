@@ -1,10 +1,10 @@
 import React from 'react';
 import { Navbar, Nav, FormControl, NavDropdown, Button, Form } from 'react-bootstrap';
 
-export default function navbar() {
+export default function navbar( props ) {
     return (
         <Navbar bg="light" expand="lg">
-            <Navbar.Brand href="#home">Quotes</Navbar.Brand>
+            <Navbar.Brand to="#home" onClick={props.done}>Quotes</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">

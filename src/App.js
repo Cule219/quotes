@@ -15,15 +15,19 @@ import PlayLists from './components/PlayLists/PlayLists';
 //Load src for frames playlists dynamically 
 
 function App() {
-  const [quotes] = useState(data);
+  const [quotes, setQuotes] = useState(data);
 
   useEffect(() => {
       //call the firebase
   });
 
+  const done = () => {
+    setQuotes(quotes.slice(1));
+  }
+
   return (
     <div className="App">
-      <Nav />
+      <Nav done={done}/>
       <PlayLists lists={playlists}/>
       <QuotesList data={quotes} />
     </div>
@@ -33,9 +37,8 @@ function App() {
 export default App;
 
 const playlists = 
-
 [
-  "https://www.youtube.com/embed?v=6jN1h-0RGko&list=RD6jN1h-0RGko",
-  "https://www.youtube.com/watch?v=R_f251UXl9Q&list=RDR_f251UXl9Q",
-  "https://www.youtube.com/watch?v=P5avN2fhvEQ&list=RDP5avN2fhvEQ"
+  "v=6jN1h-0RGko&list=RD6jN1h-0RGko",
+  "v=R_f251UXl9Q&list=RDR_f251UXl9Q",
+  "v=P5avN2fhvEQ&list=RDP5avN2fhvEQ"
 ]
